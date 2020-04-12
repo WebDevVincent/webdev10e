@@ -1,52 +1,94 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>HTML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/sub.css">
 </head>
+
 <body>
     <div class="wrap">
         <div class="header">
-        <a href="index.html">← Vissza</a>
+            <a href="index.html">← Vissza</a>
         </div>
         <div class="row">
-        <div class="col">
-            <h3>Ciklusok</h3>
-            <p>4 féle ciklus van:</p>
-            <ul>
-                <li><b>for(let i = 0; i < {érték}; i++){//KÓD//}</b> <br>Ez a ciklus kizárólag egy bizonyos értékig megy el. <br>Ezt például arra is lehet használni, hogy végigmenjünk egy tömb elemein.</li>
-                <li><b>for(n in tomb){//KÓD//}</b><br>A "for" ciklus ezen változata ugyanúgy megengedi<br>hogy végigmenjünk egy tömb elemein, de nem módosíthajtuk vele a tömb elemeit,<br> mivel az 'n in tömb' valójában az 'n' nevű változóba lemásolja a tömb adott elemét.<br>Ezt inkább a több eleminek kiírására, vagy más, a tömb eleminek módosításával nem járó<br>műveletek elvégzésére való.</li>
-                <li><b>for(valtozo of adat){//KÓD//}</b><br>A for ciklus ezen változata ugyan azt csinálja mint az 'n in tomb' verzió, azzal a különbséggel<br>hogy ez akármilyen adatot aminek több eleme van (mint például: string, tömb, stb...) képes kezelni.</li>
-                <li><b>while(true){//KÓD//}</b><br>A while ciklus kicsit másabb mint a for loop, mivel ez a ciklus nem csak végig számol egy értéken,<br> hanem képes addig ismétlődni amíg egy állapot fennáll. A 'while(true)' ciklus például sosem áll meg,<br> mert a 'true' az mindig igaz lesz, ezért az állapot fennáll, és a végtelenségig ismétlődni fog.</li>
-            </ul>
+            <div class="col">
+                <h3>Ciklusok</h3>
+                <p>4 féle ciklus van:</p>
+                <ul>
+                    <li><b>for(let i = 0; i < {érték}; i++){//KÓD//}</b><br> Ez a ciklus kizárólag egy bizonyos értékig
+                                megy el. Ezt például arra is lehet használni, hogy végigmenjünk egy tömb elemein.</li>
+                    <li><b>for(n in tomb){//KÓD//}</b><br> A "for" ciklus ezen változata ugyanúgy megengedi hogy
+                        végigmenjünk egy tömb elemein, de nem módosíthajtuk vele a tömb elemeit, mivel az 'n in tömb'
+                        valójában az 'n' nevű változóba lemásolja a tömb adott elemét. Ezt inkább a több eleminek
+                        kiírására, vagy más, a tömb eleminek módosításával nem járó műveletek elvégzésére való.</li>
+                    <li><b>for(valtozo of adat){//KÓD//}</b><br> A for ciklus ezen változata ugyan azt csinálja mint az
+                        'n in tomb' verzió, azzal a különbséggel hogy ez akármilyen adatot aminek több eleme van (mint
+                        például: string, tömb, stb...) képes kezelni.</li>
+                    <li><b>while(true){//KÓD//}</b><br>A while ciklus kicsit másabb mint a for loop, mivel ez a ciklus
+                        nem csak végig számol egy értéken, hanem képes addig ismétlődni amíg egy állapot fennáll. A
+                        'while(true)' ciklus például sosem áll meg, mert a 'true' az mindig igaz lesz, ezért az állapot
+                        fennáll, és a végtelenségig ismétlődni fog.</li>
+                    <li><b>do{//KÓD//}while(feltétel);</b><br>Ez az úgynevezett "hátultesztelős ciklus". Azért hívják
+                        így, mert ahelyett hogy csak akkor lépnénk be a ciklusba, ha és ameddig egy feltétel igaz,
+                        helyette mindenképp belépünk a ciklusba, és csak akkor folytatjuk a ciklust, ha a feltétel igaz.
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>'if' és 'switch'</h3>
+                <p>Az if és a switch, az valójában ugyan az, csak annyi különbséggel, hogy a 'switch' blokk könnyebben
+                    olvasható, mint egy 67 feltételből állő 'else if' blokk.</p>
+                <ul>
+                    <li><b>if(feltétel){//KÓD//}</b></li>
+                    <li><b>else if(feltétel){//KÓD//}</b></li>
+                    <li><b>else{//KÓD//}</b></li>
+                </ul>
+                <h3>'Switch' szintaxis</h3>
+                <pre>
+    switch(vizsgálandó elem){
+        case 'utófeltétel':
+            //KÓD//
+            break;
+        case 'utófeltétel':
+            //KÓD//
+            break;
+    }
+</pre>
+                <p>Bontsuk le elemire a blokkot. A 'Vizsgálandó elem' az egy olyan változó lehet aminek van egy
+                    állapota. Például: logikai változó (igaz vagy hamis), szám alapú változó (1, 2, 3...), szüveg alapú
+                    változó.<br></p>
+                <pre>
+    switch(v_bool){
+        case true:
+            console.log("Az érték igaz.");
+            break;
+        case false:
+            console.log("Az érték hamis.");
+            break;
+    }
+</pre><br>
+                <p>A 'case' része a blokknak azt jelzi, hogy ha a 'v_bool' változó értéke igaz vagy hamis, akkor melyik
+                    kód blokkot hajtsa végre. Látható, hogy a 'case' után nincs se '()', se '{}', helyette csak egy sima
+                    szóközt és ':' használunk. Ez azért van hogy olvashatóbb legyen a kód. A 'break' része a kódnak
+                    azért van, hogyha megtalálta a gép hogy melyik állapot igaz a változóra, ne vizsgálja tovább.
+                </p>
+            </div>
         </div>
-        <div class="col">
-            <h3>'if' és 'switch'</h3>
-            <p>Az if és a switch, az valójában ugyan az, csak annyi különbséggel, hogy a 'switch' blokk könnyebben olvasható, mint egy 67 feltételből állő 'else if' blokk.</p>
-            <ul>
-                <li><b>if(feltétel){//KÓD//}</b></li>
-                <li><b>else if(feltétel){//KÓD//}</b></li>
-                <li><b>else{//KÓD//}</b></li>
-            </ul>
-            <h3>'Switch' szintaxis</h3>
-            <pre>
-                switch(vizsgálandó elem){
-                    case 'utófeltétel':
-                        //KÓD//
-                        break;
-                    case 'utófeltétel':
-                        //KÓD//
-                        break;
-                }
-            </pre>
-            <p>Bontsuk le elemire a blokkot. A 'Vizsgálandó elem'</p>
+        <div class="row">
+            <div class="col">
+                <h3>Cím</h3>
+                <p>szöveg</p>
+            </div>
+            <div class="col">
+                <h3>Cím</h3>
+                <p>szöveg</p>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col"></div>
-        <div class="col"></div>
     </div>
 </body>
+
 </html>
